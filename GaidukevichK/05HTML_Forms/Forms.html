@@ -22,10 +22,10 @@
                 <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <INPUT TYPE="text">
+                    <INPUT TYPE="text" name="data">
                      <label><input type="submit" value="Искать" name="Search1"></label><br>
-                     <label><input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте</label>
-                     <label><input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0">в google</label>
+                     <label><input type="radio" name="radio_group" value="site" checked>на сайте</label>
+                     <label><input type="radio" name="radio_group" value="google">в google</label>
                 <p><i>Длина запроса не более 10 символов</i></p>
                 </form>
                 </fieldset>
@@ -34,13 +34,13 @@
             <td>
                 <p><strong>Простая форма поиска с вариантами:</strong></p>
 
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search2" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Строка поиска</legend>
-                    <INPUT TYPE="text" AUTOFOCUS required>
+                    <INPUT TYPE="text" name="data" AUTOFOCUS required>
                      <label><input type="submit" value="Искать" name="Search1"></label><br>
-                     <label><input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>на сайте</label>
-                     <label><input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0">в google</label>
+                     <label><input type="radio" name="radio_group" value="site" checked>на сайте</label>
+                     <label><input type="radio" name="radio_group" value="google">в google</label>
                 <p><i>* - обязательное поле<br>
                     Автофокус в поле поиска</i></p>
                 </form>
@@ -50,11 +50,11 @@
         <tr align="left" valign="top">
             <td>
                 <p><strong>Простая форма авторизации:</strong></p>
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search3" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Авторизируйтесь</legend>
-                    <INPUT TYPE="text" required><label for="login">&nbsp;Логин</label><br>
-                    <INPUT TYPE="text" required><label for="password">&nbsp;Пароль</label><br>
+                    <label><INPUT TYPE="text" name="log" required>&nbsp;Логин</label><br>
+                    <label><INPUT TYPE="text" name="psw" required>&nbsp;Пароль</label><br>
                     <label><input type="checkbox" name="system">Оставаться в системе</label><br>
                     <label><input type="submit" value="Войти" name="Enter"></label>  
                 <p><i>* - обязательное поле</i></p>
@@ -65,13 +65,13 @@
             <td>
                 <p><strong>Опрос(голосование):</strong></p>
 
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search4" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Как вам?</legend>
-                     <label><input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked>ничего</label><br>
-                     <label><input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0">неплохо</label><br>
-                     <label><input type="radio" name="radio_group" value="value_03" id="Checkbox_Group3_0">хорошо</label><br>
-                     <label><input type="radio" name="radio_group" value="value_04" id="Checkbox_Group4_0">супер</label><br>
+                     <label><input type="radio" name="radio_group" value="nothing"checked>ничего</label><br>
+                     <label><input type="radio" name="radio_group" value="notbad">неплохо</label><br>
+                     <label><input type="radio" name="radio_group" value="good">хорошо</label><br>
+                     <label><input type="radio" name="radio_group" value="super">супер</label><br>
                      <label><input type="submit" value="Отправить" name="Send"></label> 
                 <p><i>Есть скрытое поле <br>
                     name=date_voite, value="2013.12.31"</i></p>
@@ -82,11 +82,11 @@
         <tr align="left" valign="top">
             <td>
                 <p><strong>Отзыв:</strong></p>
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search5" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Оставьте Ваш отзыв</legend>
-                    <INPUT TYPE="text" required><label for="name">&nbsp;Имя</label><br>
-                    <INPUT TYPE="text" required><label for="email" method="post">&nbsp;e-mail</label><br>
+                    <label><INPUT TYPE="text" name="name" required>&nbsp;Имя</label><br>
+                    <label><INPUT TYPE="text" name="email" required>&nbsp;e-mail</label><br>
                     <textarea name="text_area" lang="ru">Форма отправки</textarea> <br>
                     <label><input type="submit" value="Отправить" name="Send"></label>  
                 <p><i>* - обязательное поле <br>
@@ -99,24 +99,24 @@
             <td>
                 <p><strong>Выпадающий и мульти списки:</strong></p>
 
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search6" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Города РБ</legend>
-                    <select name="list" id="list">
-                        <option value="1">Минск</option>
-                        <option value="2">Брест</option>
-                        <option value="0" selected>Город</option>
+                    <select name="sities1" id="s1">
+                        <option value="Minsk">Минск</option>
+                        <option value="Brest">Брест</option>
+                        <option value="Gorod" selected>Город</option>
                     </select>
-                    <select name="list" id="list">
+                    <select name="sities2" id="s2">
                         <optgroup label="Города РБ">
-                              <option value="1">Брест</option>
-                              <option value="2">Минск</option>
-                              <option value="3">Витебск</option>
+                              <option value="Brest">Брест</option>
+                              <option value="Minsk">Минск</option>
+                              <option value="Vitebsk">Витебск</option>
                         </optgroup>
                         <optgroup label="Города России">
-                              <option value="4">Москва</option>
-                              <option value="5">Рязань</option>
-                              <option value="6">Магадан</option>
+                              <option value="Moscow">Москва</option>
+                              <option value="Ryazan">Рязань</option>
+                              <option value="Magadan">Магадан</option>
                         </optgroup>
                         </select>  
                      <label><input type="submit" value="Ok" name="Ok"></label> 
@@ -130,7 +130,7 @@
         <tr align="left" valign="top">
             <td>
                 <p><strong>Загрузка файла на сервер:</strong></p>
-                <form method="post" enctype="multipart/form-data" name="Search5" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" enctype="multipart/form-data" name="Search7" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Upload</legend>
                     <p>Файл:</p>
@@ -149,7 +149,7 @@
             <td>
                 <p><strong>Валидация данных HTML5:</strong></p>
 
-                <form method="post" name="Search1" action="http://fe.it-academy.by/TestForm.php">
+                <form method="post" name="Search8" action="http://fe.it-academy.by/TestForm.php">
                 <fieldset>
                     <legend>Строка поиска</legend>
                     <input type="text" placeholder="Только русские буквы">
